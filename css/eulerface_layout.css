@@ -43,6 +43,14 @@ body {
 	display: table-cell;
 }
 
+#plot2d {
+	background: skyblue;
+}
+
+#plot3d {
+	background: orange;
+}
+
 p:first-child {
 	margin-top: 0;
 }

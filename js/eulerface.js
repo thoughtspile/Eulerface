@@ -161,5 +161,5 @@
 	};
 	
 	
-	global.mathMVC = mathMVC;
+	global.eulerface = mathMVC;
 }(this))
