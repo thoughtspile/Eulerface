@@ -1,4 +1,7 @@
 (function() {
+	document.getElementById('plot2d').style.background = 'orange';
+	document.getElementById('plot3d').style.background = 'skyblue';
+
 	var problem;
 	
 	eulerface.select(
@@ -8,6 +11,7 @@
 		problems.map(function(pr) {return pr.model.join('&'); }),
 		updateProblem
 	);
+	
 	MathJax.Hub.Queue(
 		['Typeset', MathJax.Hub],
 		[eulerface.bind, updateProblem],

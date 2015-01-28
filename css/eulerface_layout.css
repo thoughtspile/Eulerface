@@ -1,17 +1,23 @@
 @import url(http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,300italic,700);
 
-body {
-	font-family: 'PT Serif', serif;
-	color: #111;
-	height: 100%;
-	margin: 0px;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-#top_bar {
+body {
+	font-family: 'PT Serif', serif;
+	font-size: 1.7vw;
+	color: #111;
+	height: 100%;
+}
+
+
+#mainBar {
 	top: 0;
 	left: 0;
 	position: fixed;
-	width: 3em;
+	width: 6vw;
 	height: 100%;
 	background: #909080;
 	*border-right: 2px solid #909080;
@@ -19,66 +25,78 @@ body {
 
 #logo {
 	color: white;
-	font-size: 2em;
-	padding-left: 0.5em;
-}
-
-#title {
-	font-weight: 400;
-	font-size: 26pt;
-}
-
-
-#plot_area {
-	margin: 0px;
-	padding: 0px;
+	font-size: 4vw;
 	width: 100%;
-	display: table;
+	text-align: center;
+	padding-top: 2vw;
 }
 
-#plot3d, #plot2d {
-	width: 50%; 
-	height: 480px;
-	background: white;
-	display: table-cell;
+#articleTitle {
+	display: inline-block;
+	font-size: 4vw;
+	font-weight: 400;
+	padding-top: 2vw;
+	padding-bottom: 1vw;
+	padding-left: 1vw;
 }
 
-#plot2d {
-	background: skyblue;
+#sectionTitle {
+	padding-left: 2vw;
+	display: inline-block;
+	font-size: 3vw;
+	font-weight: 400;
 }
 
-#plot3d {
-	background: orange;
-}
 
-p:first-child {
-	margin-top: 0;
-}
-
-#content {
-	width: 960px;
+.articleContent {
+	width: 72vw;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#ui {
+
+.visual {
+	padding-top: .6vw;
+	padding-bottom: .6vw;
+	width: 72vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	display: flex;
+}
+
+.subVisual {
+	flex: 1;
+}
+
+
+.bodyText {
+	width: 44vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+.dynamicBlock {
+	width: 72vw;
+	display: table;
+}
+
+.control {
 	vertical-align: top;
-	display: inline-block;
-	width: 300px;
-	margin-right: 10px;
+	display: table-cell;
+	width: 20vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
 }
 
-#solution {
-	display: inline-block;
-	margin-left: 10px;
-	width: 620px;
-	margin-right: 10px;
+.controlled {
+	display: table-cell;
+	width: 44vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
 }
 
-.grafar_ui_subpanel {
-	padding: 0% 0%;
-}
 
-#helpers {
-	margin: 0;
+p {
+	padding-top: .6vw;
+	padding-bottom: .6vw;
 }

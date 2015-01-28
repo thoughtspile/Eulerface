@@ -161,5 +161,16 @@
 	};
 	
 	
+	mathMVC.setSubVisuals = function() {
+		var subVisuals = document.getElementsByClassName('subVisual');
+		if (subVisuals.length === 0)
+			return;
+		var staticWidth = window.getComputedStyle(subVisuals[0]).width;
+		for (var i = 0; i < subVisuals.length; i++)
+			subVisuals[i].style.height = staticWidth;
+	};
+	
+	mathMVC.setSubVisuals();
+	
 	global.eulerface = mathMVC;
 }(this))

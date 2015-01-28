@@ -1,47 +1,48 @@
 ﻿<!doctype html>
 
-<html lang="en">
+<html>
 
 <head>
+	<meta charset = 'utf-8'/>
 	<title>Шаблон eulerface</title>
 	
-	<link rel="stylesheet" href="../css/eulerface_layout.css" media="screen" />
-	<link rel="stylesheet" href="../css/eulerface_inline.css" media="screen" />
-	<link rel="stylesheet" href="../css/eulerface_select.css" media="screen" />
-	
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel='stylesheet' href='../css/eulerface_layout.css' media='screen' />
+	<link rel='stylesheet' href='../css/eulerface_inline.css' media='screen' />
+	<link rel='stylesheet' href='../css/eulerface_select.css' media='screen' />
 </head>
 
-<body>
-	<nav id = "top_bar">
-		<h1 id = "logo">f</h1>
-	</nav>
+<body lang = 'ru'>
+	<header id = 'mainBar'>
+		<nav id = 'siteNav'>
+			<h1 id = 'logo'>f</h1>
+		</nav>
+		<nav id = 'lessonNav'>
+		</nav>
+	</header>
 
-	<article id = "content">
-		<h2 id = "title">Тройные интегралы</h2>
+	<article class = 'articleContent'>
+		<header>
+			<h1 id = 'articleTitle'>Тройные интегралы</h1>
+			<h2 id = 'sectionTitle'></h2>
+		</header>
 	
-		<figure id = "plot_area">
-			<div id = "plot3d"></div>
-			<div id = "plot2d"></div>
+		<figure class = 'visual'>
+			<figure id = 'plot3d' class = 'subVisual'></figure>
+			<figure id = 'plot2d' class = 'subVisual'></figure>
 		</figure>
 		
-		<section class = "contentSpinner">
-			<section class = "lessonPage" id = "volumeLesson">
-				<div id = "ui">
-					Найти объем тела, ограниченного поверхностями:
-					<div id = "volumeSelect"></div>
-					<div id = "sectionControl"></div>
-					<div id = "originalShapesControl"></div>
-					<div id = "options"></div>
-				</div>
-				<div id = "solution">
+		<section class = 'articlePage' id = 'lessonVolume'>
+			<div class = 'dynamicBlock'>
+				<div class = 'control'>
 					<p>
-					Три дня в деканате покойник лежал, в штаны Пифагора одетый, <br>
-					В руках Фихтенгольца он томик держал, что сжил его с белого света, <br>
-					К ногам привязали тройной интеграл, и в матрицу труп обернули, <br>
-					А вместо молитвы какой-то нахал прочёл теорему Бернулли. <br>
+					Найти объем тела, ограниченного поверхностями:
 					</p>
-					
+					<div id = 'volumeSelect'></div>
+					<div id = 'sectionControl'></div>
+					<div id = 'originalShapesControl'></div>
+					<div id = 'options'></div>
+				</div>
+				<div class = 'controlled'>
 					<p>
 					Тройные интегралы – это то, чего уже можно не бояться =) Ибо 
 					если Вы читаете сей текст, то, скорее всего, неплохо разобрались 
@@ -94,17 +95,17 @@
 					субъективной оценке встречается в 6-7 раз чаще.
 					</p>
 				</div>
-			</section>
+			</div>
 		</section>
 	</article>
 	
 	
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-	<script type="text/x-mathjax-config">
+    <script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+	<script type='text/x-mathjax-config'>
 		MathJax.Hub.Config({
 			skipStartupTypeset: true,
 			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
-			"HTML-CSS": { linebreaks: { automatic: true, width: "75% container" } }
+			'HTML-CSS': { linebreaks: { automatic: true, width: '75% container' } }
 		});
     </script>
 	<script src = '../js/eulerface.js'></script>
