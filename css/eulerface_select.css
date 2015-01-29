@@ -1,8 +1,11 @@
 .dropDown {
-	position: fixed;
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	left: -1px;
 	visibility: hidden;
 	background: white;
-	margin-top: -1em;
+	margin-top: -.6em;
 	border-radius: 0 0 1em 1em;
 	border: solid .1em #909080;
 	border-top: none;
@@ -11,6 +14,7 @@
 
 .selectContainer {
 	display: table;
+	position: relative;
 	border: solid .1em #909080;
 	border-radius: .6em;
 	width: 100%;
@@ -44,8 +48,8 @@
 }
 
 .option {
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
 }
 
 .option:last-child {	

@@ -4,6 +4,9 @@
 
 <head>
 	<meta charset = 'utf-8'/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<title>Шаблон eulerface</title>
 	
 	<link rel='stylesheet' href='../css/eulerface_layout.css' media='screen' />
@@ -21,14 +24,25 @@
 	</header>
 
 	<article class = 'articleContent'>
-		<header>
+		<header id = 'articleHeader'>
 			<h1 id = 'articleTitle'>Тройные интегралы</h1>
 			<h2 id = 'sectionTitle'></h2>
 		</header>
 	
 		<figure class = 'visual'>
-			<figure id = 'plot3d' class = 'subVisual'></figure>
-			<figure id = 'plot2d' class = 'subVisual'></figure>
+			<figure class = 'visualFlex'>
+				<div class = 'aspect'>
+					<div class = 'aspectHolder'></div>
+					<figure id = 'plot2d' class = 'subVisual' style = 'background: khaki'></figure>
+				</div>				
+				<div class = 'aspect'>
+					<div class = 'aspectHolder'></div>
+					<figure id = 'plot3d' class = 'subVisual' style = 'background: cyan'></figure>
+				</div>
+			</figure>
+			<figcaption class = 'visualDesc'>
+				Слева: оранжевый квадрат. Справа: голубой квадрат.
+			</figcaption>
 		</figure>
 		
 		<section class = 'articlePage' id = 'lessonVolume'>

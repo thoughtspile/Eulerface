@@ -93,16 +93,15 @@
 			else
 				dropDown.style.visibility = 'hidden';
 			var pos = field.getBoundingClientRect();
-			dropDown.style.left = Math.floor(pos.left) + 'px';
-			dropDown.style.top = Math.floor(pos.bottom) + 'px';
-			dropDown.style.width = Math.floor(pos.right - pos.left) - 2 + 'px';
-			dropDown.style.height = window.innerHeight - Math.floor(pos.bottom) + 'px';
+			var availHeight = window.innerHeight - pos.bottom,
+				selfHeight = pos.bottom - pos.top;
+			dropDown.style.height = Math.min(availHeight, selfHeight) + 'px';
 		});
 		
 		// add the options container
 		var dropDown = document.createElement('div');
 		dropDown.className = 'dropDown';
-		document.body.appendChild(dropDown);
+		field.appendChild(dropDown);
 
 		// prevent window scroll
 		dropDown.addEventListener('mouseover', mathMVC.lockScroll);
@@ -166,8 +165,8 @@
 		if (subVisuals.length === 0)
 			return;
 		var staticWidth = window.getComputedStyle(subVisuals[0]).width;
-		for (var i = 0; i < subVisuals.length; i++)
-			subVisuals[i].style.height = staticWidth;
+		//for (var i = 0; i < subVisuals.length; i++)
+		//	subVisuals[i].style.height = staticWidth;
 	};
 	
 	mathMVC.setSubVisuals();

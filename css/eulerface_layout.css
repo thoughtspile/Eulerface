@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,300italic,700);
 
+@import url(eulerface_layout_s.css);
+@import url(eulerface_layout_m.css) (min-width: 47em) and (max-width: 83.99em);
+@import url(eulerface_layout_l.css) (min-width: 84em);
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,96 +11,28 @@
 
 body {
 	font-family: 'PT Serif', serif;
-	font-size: 1.7vw;
 	color: #111;
 	height: 100%;
 }
 
-
 #mainBar {
-	top: 0;
-	left: 0;
-	position: fixed;
-	width: 6vw;
-	height: 100%;
 	background: #909080;
 	*border-right: 2px solid #909080;
 }
 
-#logo {
-	color: white;
-	font-size: 4vw;
-	width: 100%;
-	text-align: center;
-	padding-top: 2vw;
+.articleHeader: {
 }
 
-#articleTitle {
-	display: inline-block;
-	font-size: 4vw;
-	font-weight: 400;
-	padding-top: 2vw;
-	padding-bottom: 1vw;
-	padding-left: 1vw;
-}
-
-#sectionTitle {
-	padding-left: 2vw;
-	display: inline-block;
-	font-size: 3vw;
-	font-weight: 400;
-}
-
-
-.articleContent {
-	width: 72vw;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-.visual {
-	padding-top: .6vw;
-	padding-bottom: .6vw;
-	width: 72vw;
-	padding-left: 1vw;
-	padding-right: 1vw;
-	display: flex;
-}
-
-.subVisual {
-	flex: 1;
-}
-
-
-.bodyText {
-	width: 44vw;
-	padding-left: 1vw;
-	padding-right: 1vw;
+.visualDesc {
+	color: rgba(0, 0, 0, .6);
 }
 
 .dynamicBlock {
-	width: 72vw;
-	display: table;
 }
 
 .control {
 	vertical-align: top;
-	display: table-cell;
-	width: 20vw;
-	padding-left: 1vw;
-	padding-right: 1vw;
 }
 
 .controlled {
-	display: table-cell;
-	width: 44vw;
-	padding-left: 1vw;
-	padding-right: 1vw;
-}
-
-
-p {
-	padding-top: .6vw;
-	padding-bottom: .6vw;
 }
