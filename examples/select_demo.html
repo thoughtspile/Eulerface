@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<meta charset = 'utf-8'/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Eulerface select</title>
+	<link rel='stylesheet' href='../css/eulerface_select.css' media='screen' />
+	<style>
+		.stest { width: 10em; }
+		body { height: 100%; }
+	</style>
+</head>
+
+<body lang = 'ru'>	
+	<select id = 'testSelect' class = 'stest'>
+		<option value = 'IT'>Italy</option>
+		<option value = 'RU'>Russia</option>
+	</select>
+	<div id = 'romania'>
+		<img src = 'http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/125px-Flag_of_Romania.svg.png'></img>
+	</div>
+	<div id = 'output'>
+	</div>
+	
+	<script src = '../js/select.js'></script>
+	<script>
+		var customSelect = new eulerface.Select(document.getElementById('testSelect')),
+			output = document.getElementById('output'),
+			selectContainer = document.getElementById('testSelect');
+		customSelect.addOption(document.getElementById('romania'), 'RO');
+		selectContainer.addEventListener('change', function() {
+			output.innerHTML = selectContainer.getAttribute('value');
+		});
+	</script>
+</body>
+
+</html>

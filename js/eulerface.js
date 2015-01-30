@@ -42,17 +42,7 @@
 		document.removeEventListener('mousemove', callback);
 		document.addEventListener('mouseup', mathMVC.drop);
 	};
-	
-	mathMVC.lockScroll = function() {
-		document.body.style.overflow = 'hidden';
-		document.getElementsByTagName('html')[0].style['overflow-y'] = 'scroll';
-	};
-	
-	mathMVC.unlockScroll = function() {		
-		document.body.style.overflow = 'auto';
-		document.getElementsByTagName('html')[0].style['overflow-y'] = 'hidden';
-	};
-	
+		
 	
 	mathMVC.resolveControls = function(tex) {		
 		if (/\\control/.test(tex)) {
