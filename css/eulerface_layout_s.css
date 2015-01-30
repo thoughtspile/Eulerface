@@ -1,5 +1,5 @@
 body {
-	font-size: 12pt;
+	*font-size: 12pt;
 }
 
 
@@ -51,6 +51,7 @@ body {
 
 .aspect {
 	flex: 1;
+	-webkit-flex: 1;
 	min-width: 9em;
 	position: relative;
 }
