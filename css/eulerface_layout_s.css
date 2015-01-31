@@ -75,9 +75,10 @@ body {
 
 
 .bodyText {
-	width: 44vw;
-	padding-left: 1em;
-	padding-right: 1em;
+	margin-top: 2rem;
+	border-top: 1px solid rgba(0, 0, 0, .6);
+	padding-top: .6rem;
+	width: 100%;
 }
 
 .dynamicBlock {
