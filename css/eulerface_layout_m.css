@@ -74,11 +74,25 @@ body {
 }
 
 
+.sideNote {	
+	position: absolute;
+	color: rgba(0, 0, 0, .6);
+	top: 0;
+	left: 29rem;
+	width: 15rem;
+	font-size: .8rem;
+	padding-top: .6rem;
+	padding-left: 0;
+	padding-right: 0rem;	
+}
+
+
 .bodyText {
+	position: relative;
 	padding-top: 0;
 	margin-top: 0;
 	border-top: none;
-	width: 36em;
+	width: 27em;
 	padding-left: 1em;
 	padding-right: 1em;
 }
