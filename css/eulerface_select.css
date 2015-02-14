@@ -63,7 +63,7 @@
 }
 
 .option:hover {
-	background: #F0F0E0;
+	background: rgba(144, 144, 128, .4);
 }
 
 html {

@@ -6,7 +6,8 @@
 		mouseDown: false,
 		models: {},
 		activeModel: [],
-		activeId: null
+		activeId: null,
+		elements: {}
 	};
 	
 	
@@ -160,6 +161,40 @@
 	};
 	
 	mathMVC.setSubVisuals();
+	
+	
+	mathMVC.prepare = function() {
+		//mathMVC.makeSelects();
+		mathMVC.loadMathJax();
+	
+		return this;
+	};
+	
+	mathMVC.makeSelects = function() {
+		var selects = document.getElementsByTagName('select');
+		for (var i = selects.length - 1; i >= 0; i--)
+			mathMVC.elements[selects[i].getAttribute('id')] = new mathMVC.Select(selects[i]);
+	};
+	
+	mathMVC.loadMathJax = function() {
+		var head = document.getElementsByTagName('head')[0],
+			script = document.createElement('script');
+			
+		script.type = 'text/x-mathjax-config';
+		script[(window.opera ? 'innerHTML': 'text')] =
+			'MathJax.Hub.Config({\n' +
+			//'  skipStartupTypeset: true,' +
+			"  tex2jax: { inlineMath: [['$','$'], ['\\\\(','\\\\)']] }\n" +
+			'});';
+		head.appendChild(script);
+		
+		script = document.createElement('script');
+		script.src = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+		head.appendChild(script);
+		
+		//MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+	};
+	
 	
 	global.eulerface = mathMVC;
 }(this))

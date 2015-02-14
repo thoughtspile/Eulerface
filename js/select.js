@@ -60,6 +60,8 @@ eulerface.Select = function(field, preprocess) {
 		var value = oldOptions[i].getAttribute('value');
 		this.addOption(preprocess(value, oldOptions[i]), value);
 	}
+	
+	eulerface.elements[field.getAttribute('id')] = this;
 }
 
 eulerface.Select.prototype.addOption = function(node, value) {
