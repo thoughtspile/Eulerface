@@ -1,141 +1,40 @@
 ﻿<!doctype html>
 
-<html>
-
+<html lang="en">
 <head>
-	<meta charset = 'utf-8'/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Шаблон eulerface</title>
-	
-	<link rel='stylesheet' href='../css/eulerface_layout.css' media='screen' />
-	<link rel='stylesheet' href='../css/eulerface_inline.css' media='screen' />
-	<link rel='stylesheet' href='../css/eulerface_select.css' media='screen' />
+	<title></title>
+	<style>
+		#plot_area {
+			margin: 0px;
+			overflow: hidden;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background: white;
+		}
+	</style>
 </head>
 
-<body lang = 'ru'>
-	<header id = 'mainBar'>
-		<nav id = 'siteNav'>
-			<h1 id = 'logo'>f</h1>
-		</nav>
-		<nav id = 'lessonNav'>
-		</nav>
-	</header>
-
-	<article class = 'articleContent'>
-		<header id = 'articleHeader'>
-			<h1 id = 'articleTitle'>Тройные интегралы</h1>
-		</header>
+<body>
+	<figure class="panel" id="plot_area"></figure>
 	
-		<figure class = 'visual'>
-			<figure class = 'visualFlex'>
-				<div class = 'aspect'>
-					<div class = 'aspectHolder'></div>
-					<figure id = 'plot2d' class = 'subVisual' style = 'background: orange'></figure>
-				</div>				
-				<div class = 'aspect'>
-					<div class = 'aspectHolder'></div>
-					<figure id = 'plot2d' class = 'subVisual' style = 'background: red'></figure>
-				</div>				
-				<div class = 'aspect'>
-					<div class = 'aspectHolder'></div>
-					<figure id = 'plot3d' class = 'subVisual' style = 'background: skyblue'></figure>
-				</div>
-			</figure>
-			<figcaption class = 'visualDesc'>
-				Слева: оранжевый квадрат. Справа: голубой квадрат.
-			</figcaption>
-		</figure>
-		
-		<section class = 'articlePage' id = 'lessonVolume'>
-			<h2 class = 'sectionTitle'></h2>
-			<div class = 'dynamicBlock'>
-				<div class = 'control'>
-					<p>
-					Найти объем тела, ограниченного поверхностями:
-					</p>
-					<div id = 'volumeSelect'></div>
-					<div id = 'sectionControl'></div>
-					<div id = 'originalShapesControl'></div>
-					<div id = 'options'></div>
-				</div>
-				<div class = 'controlled'>
-					<div id = 'V81A'>
-						<p>
-						Тройные интегралы – это то, чего уже можно не бояться =) Ибо 
-						если Вы читаете сей текст, то, скорее всего, неплохо разобрались 
-						с теорией и практикой «обычных» интегралов, а также двойными 
-						интегралами. А там, где двойной, неподалёку и тройной:
-						$$ \iiint\limits_{T} f(x, y, z) dxdydz $$
-						</p>
-
-						<p>
-						Разбираемся в записи:
-						<ul>
-							<li>\( \iiint \) &mdash; значок тройного интеграла;</li>
-							<li>\( u = f(x, y, z) \) &mdash; подынтегральная функция трёх переменных;</li>
-							<li>\( dxdydz \) &mdash; произведение дифференциалов.</li>
-							<li>\( T \) &mdash; область интегрирования.</li>
-						</ul>
-						</p>
-					</div>
-					
-					<div id = 'V82B'>
-						<p>
-						Особо остановимся на области интегрирования. Если в двойном 
-						интеграле она представляет собой плоскую фигуру, то здесь – 
-						пространственное тело, которое, как известно, ограничено 
-						множеством поверхностей. Таким образом, помимо вышеуказанного 
-						вы должны ориентироваться в основных поверхностях пространства 
-						и уметь выполнять простейшие трёхмерные чертежи.
-						</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class = 'bodyText'>
-				<p>
-				Некоторые приуныли, понимаю…. Увы, статью нельзя озаглавить 
-				«тройные интегралы для чайников», и кое-что знать/уметь нужно. 
-				Но ничего страшного – весь материал изложен в предельно доступной 
-				форме и осваивается в кратчайшие сроки!
-				</p>
-					
-				<p>
-				Что значит вычислить тройной интеграл и что это вообще такое?
-				Вычислить тройной интеграл – это значит найти ЧИСЛО:	
-				В простейшем случае, когда , тройной интеграл  численно равен объёму тела. 
-				И действительно, в соответствии с общим смыслом интегрирования, произведение 
-				равно бесконечно малому объёму элементарного «кирпичика» тела. А тройной
-				интеграл как раз и объединяет все эти бесконечно малые частички по области, 
-				в результате чего получается интегральное (суммарное) значение объёма тела: .
-				</p>
-				
-				<aside class = 'sideNote'>				
-				Кроме того, у тройного интеграла есть важные физические приложения. Но об этом позже – 
-				во 2-ой части урока, посвящённой вычислениям произвольных тройных интегралов, у 
-				которых функция  в общем случае отлична от константы и непрерывна в области . В 
-				данной же статье детально рассмотрим задачу нахождения объёма, которая по моей 
-				субъективной оценке встречается в 6-7 раз чаще.
-				</aside>
-			</div>
-		</section>
-	</article>
-	
-	
-    <script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
-	<script type='text/x-mathjax-config'>
-		MathJax.Hub.Config({
-			skipStartupTypeset: true,
-			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
-			'HTML-CSS': { linebreaks: { automatic: true, width: '75% container' } }
-		});
-    </script>
-	<script src = '../js/eulerface.js'></script>
-	<script src = '../js/select.js'></script>
-	<script src = 'problemlist.js'></script>
-	<script src = 'basic_script.js'></script>
+	<script type="text/javascript" src="../loader.js"></script>
+	<script type="text/javascript">
+		runGrafar(function() {
+			var pan = new grafar.Panel(document.getElementById('plot_area')).setAxes(['x', 'y']);
+                    console.log('hello');
+            var graph = new grafar.Object()
+                .constrain({what: 'x', maxlen: 300, as: grafar.seq(-2, 2, 'x')})
+                .constrain({what: 'y', as: function(data, l) {
+                    console.log('hello');
+                    for (var i = 0; i < l; i++)
+                        data.y[i] = 2;//Math.sin(data.x[i]) * data.x[i] * data.x[i];
+                })
+                .pin(pan);
+            console.log(graph);
+		}, '../');
+	</script>
 </body>
-
 </html>

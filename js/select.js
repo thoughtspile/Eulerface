@@ -10,6 +10,11 @@ eulerface.unlockScroll = function() {
 	document.getElementsByTagName('html')[0].style['overflow-y'] = 'hidden';
 };
 
+eulerface.noScrollOver = function(el) {
+	el.addEventListener('mouseover', eulerface.lockScroll);
+	el.addEventListener('mouseout', eulerface.unlockScroll);
+};
+
 
 eulerface.Select = function(field, preprocess) {
 	preprocess = preprocess || function (value, node) {
