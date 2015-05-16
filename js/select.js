@@ -1,4 +1,4 @@
-var eulerface = eulerface || {};
+var eulerface = eulerface || {elements: {}};
 
 eulerface.lockScroll = function() {
 	document.body.style.overflow = 'hidden';
